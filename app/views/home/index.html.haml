@@ -1,0 +1,28 @@
+%body
+  #container
+    %header
+      %h1 WDI3 Bank
+
+    %div.checking
+      %h2 Checkings Account
+
+
+
+    %p
+      .one= text_field_tag 'checkings'
+      .one= submit_tag 'deposit', :id => 'checking_dep'
+      .one= submit_tag 'withdraw', :id => 'checking_with'
+      #checking
+
+  %div.saving
+    %h2 Savings Account
+
+    %p
+      .one= text_field_tag 'savings'
+      .one= submit_tag 'deposit', :id => 'saving_dep'
+      .one= submit_tag 'withdraw', :id => 'saving_with'
+      #saving
+
+
+
+
