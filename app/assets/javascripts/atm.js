@@ -24,16 +24,17 @@ $(document).ready(function () {
     $('.checking h2').text(checkings);
     }   else if (amount > checkings) {
         $('#checkings').addClass('alert');
-        checkings = checkings - checkings;
-        savings = savings - (amount - checking);
+
+        savings = savings - (amount - checkings);
+        checkings = 0;
+        $('.checking h2').text(checkings);
+        $('.saving h2').text(savings);
+
     }
   };
 
 
-
-
-
-var saving_deposit = function () {        //defining a function called checking_deposit
+var saving_deposit = function () {        //defining a function called saving_deposit
     var amount = $('#savings').val();       //defining amount by the .val that gets entered
     amount = parseInt(amount);                // this makes what gets entered into an integer
 
